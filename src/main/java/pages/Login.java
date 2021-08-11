@@ -14,6 +14,7 @@ public class Login {
     private By labelPassword =By.cssSelector("#root > div > div.reg-login > form > div:nth-child(3) > input");
     private By loginButton = By.cssSelector("#root > div > div.reg-login > form > button");
 
+
     public Login(WebDriver driver) {
         this.driver = driver;
     }
@@ -54,7 +55,7 @@ public class Login {
         try {
             String message = driver.findElement(By.cssSelector("#common-nav-brand")).getText();
             Assert.assertEquals(message, "LOGIN");
-            System.out.print("User is Logged in and redirected to MY ACCOUNT page.");
+            System.out.print("User is Logged in and redirected to MY ACCOUNT page.\n \n");
         }catch (NoSuchElementException e){
             System.out.print(e.getMessage());
         }

@@ -28,9 +28,10 @@ public class SmokeTest {
 
         Login objLogin =new Login(driver);
         objLogin.LoginUser("pllp@example.com", "123456");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         Bid objBid = new Bid(driver);
-        objBid.doBid();
+        objBid.doBid("40");
 
 
 
